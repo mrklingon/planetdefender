@@ -47,8 +47,22 @@ let missle: game.LedSprite = null
 let defender: game.LedSprite = null
 let droid = 0
 droid = 0
-defender = game.createSprite(2, 4)
 game.setLife(10)
+images.createBigImage(`
+    . # # . . . . . . .
+    # # # # . . . . . .
+    # # # # . # . . # .
+    # # # # . . . . . .
+    . # # . . . . . . .
+    `).scrollImage(1, 200)
+images.createBigImage(`
+    . . . . # . # . . .
+    . . . . . # . . . .
+    . # . # . # . . . .
+    . . . . # . # . . .
+    . . . . # . . # . .
+    `).scrollImage(1, 200)
+defender = game.createSprite(2, 4)
 basic.forever(function () {
     basic.pause(2000)
     while (true) {
