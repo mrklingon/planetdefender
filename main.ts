@@ -9,14 +9,14 @@ function doMissle () {
             game.addScore(5)
             basic.pause(100)
             rock2 = game.createSprite(randint(0, 4), randint(0, 4))
-            rock2.set(LedSpriteProperty.Brightness, 100)
+            rock2.set(LedSpriteProperty.Brightness, 50)
         }
         if (missle.isTouching(rock1)) {
             rock1.delete()
             game.addScore(5)
             basic.pause(100)
             rock1 = game.createSprite(randint(0, 4), randint(0, 4))
-            rock1.set(LedSpriteProperty.Brightness, 100)
+            rock1.set(LedSpriteProperty.Brightness, 50)
         }
     }
     missle.delete()
@@ -70,7 +70,7 @@ basic.forever(function () {
     while (true) {
         rock1 = game.createSprite(randint(0, 4), randint(0, 4))
         rock1.turn(Direction.Right, randint(0, 359))
-        rock1.set(LedSpriteProperty.Brightness, 100)
+        rock1.set(LedSpriteProperty.Brightness, 50)
         while (!(rock1.isTouchingEdge())) {
             rock1.move(1)
             basic.pause(300)
@@ -86,7 +86,7 @@ basic.forever(function () {
     while (true) {
         rock2 = game.createSprite(randint(0, 4), randint(0, 4))
         rock2.turn(Direction.Right, randint(0, 359))
-        rock2.set(LedSpriteProperty.Brightness, 100)
+        rock2.set(LedSpriteProperty.Brightness, 50)
         while (!(rock2.isTouchingEdge())) {
             rock2.move(1)
             basic.pause(200)
